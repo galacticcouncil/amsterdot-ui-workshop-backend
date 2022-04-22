@@ -1,0 +1,19 @@
+type Pool @entity {
+  "ID is Pool address"
+  id: ID!
+  assetA: BigInt!
+  assetB: BigInt!
+  assetABalance: BigInt!
+  assetBBalance: BigInt!
+  historicalBalances: [HistoricalBalance!] @derivedFrom(field: "pool")
+}
+
+type HistoricalBalance @entity {
+  "ID is Pool address-blockHeight"
+  id: ID!
+  pool: Pool!
+  assetABalance: BigInt!
+  assetBBalance: BigInt!
+  blockHeight: BigInt!
+  createdAt: DateTime!
+}

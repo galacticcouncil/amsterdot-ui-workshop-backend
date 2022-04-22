@@ -1,0 +1,11 @@
+{
+  "outDir": "src/types",
+  "chainVersions": "basiliskVersions.json",
+  "typesBundle": "basilisk",
+  "events": [
+    "balances.Transfer",
+    "tokens.Transfer",
+    "xyk.PoolCreated"
+  ],
+  "calls": []
+}
